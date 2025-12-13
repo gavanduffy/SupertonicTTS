@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD00D65B2ED162D00002FA95 /* onnxruntime in Frameworks */ = {isa = PBXBuildFile; productRef = BD00D65A2ED162D00002FA95 /* onnxruntime */; };
+		BD00D65D2ED162D00002FA95 /* onnxruntime_extensions in Frameworks */ = {isa = PBXBuildFile; productRef = BD00D65C2ED162D00002FA95 /* onnxruntime_extensions */; };
+		BD5F4C4E2ED7E0ED00B5FB80 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F4C4D2ED7E0ED00B5FB80 /* Haptics.swift */; };
+		BD6C01582EDE776F00A87867 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C01572EDE776F00A87867 /* PreferencesView.swift */; };
+		BD6C015A2EDE784E00A87867 /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6C01592EDE784E00A87867 /* Voice.swift */; };
+		BD6E125B2EE9103000B6DEE4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E125A2EE9103000B6DEE4 /* Helpers.swift */; };
+		BD6E125D2EE91F9C00B6DEE4 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E125C2EE91F9C00B6DEE4 /* TextInputView.swift */; };
+		BD867C1F2EEA37F700024301 /* GeneratedAudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD867C1E2EEA37F700024301 /* GeneratedAudioView.swift */; };
+		BD867C352EEA571C00024301 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD867C342EEA571C00024301 /* Preferences.swift */; };
+		BD867C372EEA5F7500024301 /* SampleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD867C362EEA5F7500024301 /* SampleText.swift */; };
+		BD95FC512ED4E1EB009F26DA /* KeyboardDismisser in Frameworks */ = {isa = PBXBuildFile; productRef = BD95FC502ED4E1EB009F26DA /* KeyboardDismisser */; };
+		BD95FC682ED51718009F26DA /* PerformanceMonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD95FC672ED51718009F26DA /* PerformanceMonitorView.swift */; };
+		BD95FC6A2ED51BAD009F26DA /* KeyboardObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD95FC692ED51BAD009F26DA /* KeyboardObserver.swift */; };
+		BD95FC6C2ED51C12009F26DA /* PromptStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD95FC6B2ED51C12009F26DA /* PromptStorage.swift */; };
+		BD95FC6E2ED52168009F26DA /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD95FC6D2ED52168009F26DA /* HomeHeaderView.swift */; };
+		BD95FC702ED52443009F26DA /* PromptListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD95FC6F2ED52443009F26DA /* PromptListView.swift */; };
+		BDB071892ED69D45004A12F7 /* SynthesisConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB071882ED69D45004A12F7 /* SynthesisConfig.swift */; };
+		BDB0718B2ED69E6D004A12F7 /* SupertonicSynthesizerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB0718A2ED69E6D004A12F7 /* SupertonicSynthesizerEngine.swift */; };
+		BDD288BE2EEB9FD0007F7C1C /* CacheController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD288BD2EEB9FD0007F7C1C /* CacheController.swift */; };
+		BDE485142ED2A447004CDB0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDE4850E2ED2A447004CDB0E /* Assets.xcassets */; };
+		BDE485192ED2A447004CDB0E /* ApplicationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE485132ED2A447004CDB0E /* ApplicationVM.swift */; };
+		BDE4851A2ED2A447004CDB0E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE485102ED2A447004CDB0E /* ContentView.swift */; };
+		BDE4851B2ED2A447004CDB0E /* OnnxHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE485112ED2A447004CDB0E /* OnnxHelpers.swift */; };
+		BDE4851C2ED2A447004CDB0E /* TTSAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4850F2ED2A447004CDB0E /* TTSAudioPlayer.swift */; };
+		BDE4851D2ED2A447004CDB0E /* TTSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE485122ED2A447004CDB0E /* TTSService.swift */; };
+		BDE4851E2ED2A447004CDB0E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4850D2ED2A447004CDB0E /* App.swift */; };
+		BDE485202ED2A839004CDB0E /* PerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE4851F2ED2A839004CDB0E /* PerformanceMonitor.swift */; };
+		BDE485232ED2B089004CDB0E /* CompactSlider in Frameworks */ = {isa = PBXBuildFile; productRef = BDE485222ED2B089004CDB0E /* CompactSlider */; };
+		BDE485252ED2B78B004CDB0E /* ShakeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE485242ED2B78B004CDB0E /* ShakeDetector.swift */; };
+		BDE485282ED2BC5C004CDB0E /* BlurUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = BDE485272ED2BC5C004CDB0E /* BlurUIKit */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD00D63F2ED162400002FA95 /* SupertonicTTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupertonicTTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD5F4C4D2ED7E0ED00B5FB80 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		BD6C01572EDE776F00A87867 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		BD6C01592EDE784E00A87867 /* Voice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice.swift; sourceTree = "<group>"; };
+		BD6E125A2EE9103000B6DEE4 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BD6E125C2EE91F9C00B6DEE4 /* TextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
+		BD867C1E2EEA37F700024301 /* GeneratedAudioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedAudioView.swift; sourceTree = "<group>"; };
+		BD867C342EEA571C00024301 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		BD867C362EEA5F7500024301 /* SampleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleText.swift; sourceTree = "<group>"; };
+		BD95FC672ED51718009F26DA /* PerformanceMonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceMonitorView.swift; sourceTree = "<group>"; };
+		BD95FC692ED51BAD009F26DA /* KeyboardObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserver.swift; sourceTree = "<group>"; };
+		BD95FC6B2ED51C12009F26DA /* PromptStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptStorage.swift; sourceTree = "<group>"; };
+		BD95FC6D2ED52168009F26DA /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		BD95FC6F2ED52443009F26DA /* PromptListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromptListView.swift; sourceTree = "<group>"; };
+		BDB071882ED69D45004A12F7 /* SynthesisConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesisConfig.swift; sourceTree = "<group>"; };
+		BDB0718A2ED69E6D004A12F7 /* SupertonicSynthesizerEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupertonicSynthesizerEngine.swift; sourceTree = "<group>"; };
+		BDD288BD2EEB9FD0007F7C1C /* CacheController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheController.swift; sourceTree = "<group>"; };
+		BDE4850D2ED2A447004CDB0E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		BDE4850E2ED2A447004CDB0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDE4850F2ED2A447004CDB0E /* TTSAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSAudioPlayer.swift; sourceTree = "<group>"; };
+		BDE485102ED2A447004CDB0E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BDE485112ED2A447004CDB0E /* OnnxHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnnxHelpers.swift; sourceTree = "<group>"; };
+		BDE485122ED2A447004CDB0E /* TTSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTSService.swift; sourceTree = "<group>"; };
+		BDE485132ED2A447004CDB0E /* ApplicationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationVM.swift; sourceTree = "<group>"; };
+		BDE4851F2ED2A839004CDB0E /* PerformanceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceMonitor.swift; sourceTree = "<group>"; };
+		BDE485242ED2B78B004CDB0E /* ShakeDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeDetector.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BD00D67D2ED164A90002FA95 /* onnx */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = onnx;
+			sourceTree = "<group>";
+		};
+		BDE4852D2ED2BD90004CDB0E /* voice_styles */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = voice_styles;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD00D63C2ED1623F0002FA95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE485282ED2BC5C004CDB0E /* BlurUIKit in Frameworks */,
+				BD00D65D2ED162D00002FA95 /* onnxruntime_extensions in Frameworks */,
+				BDE485232ED2B089004CDB0E /* CompactSlider in Frameworks */,
+				BD00D65B2ED162D00002FA95 /* onnxruntime in Frameworks */,
+				BD95FC512ED4E1EB009F26DA /* KeyboardDismisser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD00D6362ED1623F0002FA95 = {
+			isa = PBXGroup;
+			children = (
+				BDE485322ED2BD9D004CDB0E /* SupertonicTTS */,
+				BD00D6402ED162400002FA95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD00D6402ED162400002FA95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD00D63F2ED162400002FA95 /* SupertonicTTS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD13E5472ED40FC20007D3EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4850E2ED2A447004CDB0E /* Assets.xcassets */,
+				BDE4852D2ED2BD90004CDB0E /* voice_styles */,
+				BD00D67D2ED164A90002FA95 /* onnx */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD13E5482ED410580007D3EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BDE4850F2ED2A447004CDB0E /* TTSAudioPlayer.swift */,
+				BDE485132ED2A447004CDB0E /* ApplicationVM.swift */,
+				BDE4851F2ED2A839004CDB0E /* PerformanceMonitor.swift */,
+				BD95FC692ED51BAD009F26DA /* KeyboardObserver.swift */,
+				BD95FC6B2ED51C12009F26DA /* PromptStorage.swift */,
+				BD5F4C4D2ED7E0ED00B5FB80 /* Haptics.swift */,
+				BD867C342EEA571C00024301 /* Preferences.swift */,
+				BDD288BD2EEB9FD0007F7C1C /* CacheController.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BD6E125E2EE923BB00B6DEE4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BDB071882ED69D45004A12F7 /* SynthesisConfig.swift */,
+				BD6C01592EDE784E00A87867 /* Voice.swift */,
+				BD6E125A2EE9103000B6DEE4 /* Helpers.swift */,
+				BD867C362EEA5F7500024301 /* SampleText.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BD95FC662ED5170F009F26DA /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				BDE485242ED2B78B004CDB0E /* ShakeDetector.swift */,
+				BD95FC672ED51718009F26DA /* PerformanceMonitorView.swift */,
+				BD95FC6D2ED52168009F26DA /* HomeHeaderView.swift */,
+				BD95FC6F2ED52443009F26DA /* PromptListView.swift */,
+				BD6C01572EDE776F00A87867 /* PreferencesView.swift */,
+				BD6E125C2EE91F9C00B6DEE4 /* TextInputView.swift */,
+				BD867C1E2EEA37F700024301 /* GeneratedAudioView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		BD9691412EDF8E560026EAA9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BDB0718A2ED69E6D004A12F7 /* SupertonicSynthesizerEngine.swift */,
+				BDE485122ED2A447004CDB0E /* TTSService.swift */,
+				BDE485112ED2A447004CDB0E /* OnnxHelpers.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BDE485322ED2BD9D004CDB0E /* SupertonicTTS */ = {
+			isa = PBXGroup;
+			children = (
+				BD13E5472ED40FC20007D3EE /* Resources */,
+				BD6E125E2EE923BB00B6DEE4 /* Helpers */,
+				BD9691412EDF8E560026EAA9 /* Core */,
+				BD13E5482ED410580007D3EE /* Services */,
+				BD95FC662ED5170F009F26DA /* Content */,
+				BDE485102ED2A447004CDB0E /* ContentView.swift */,
+				BDE4850D2ED2A447004CDB0E /* App.swift */,
+			);
+			path = SupertonicTTS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD00D63E2ED1623F0002FA95 /* SupertonicTTS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD00D64A2ED162410002FA95 /* Build configuration list for PBXNativeTarget "SupertonicTTS" */;
+			buildPhases = (
+				BD00D63B2ED1623F0002FA95 /* Sources */,
+				BD00D63C2ED1623F0002FA95 /* Frameworks */,
+				BD00D63D2ED1623F0002FA95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				BD00D67D2ED164A90002FA95 /* onnx */,
+				BDE4852D2ED2BD90004CDB0E /* voice_styles */,
+			);
+			name = SupertonicTTS;
+			packageProductDependencies = (
+				BD00D65A2ED162D00002FA95 /* onnxruntime */,
+				BD00D65C2ED162D00002FA95 /* onnxruntime_extensions */,
+				BDE485222ED2B089004CDB0E /* CompactSlider */,
+				BDE485272ED2BC5C004CDB0E /* BlurUIKit */,
+				BD95FC502ED4E1EB009F26DA /* KeyboardDismisser */,
+			);
+			productName = SupertonicTTS;
+			productReference = BD00D63F2ED162400002FA95 /* SupertonicTTS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD00D6372ED1623F0002FA95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					BD00D63E2ED1623F0002FA95 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+				};
+			};
+			buildConfigurationList = BD00D63A2ED1623F0002FA95 /* Build configuration list for PBXProject "SupertonicTTS" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD00D6362ED1623F0002FA95;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BD00D6592ED162D00002FA95 /* XCRemoteSwiftPackageReference "onnxruntime-swift-package-manager" */,
+				BDE485212ED2B089004CDB0E /* XCRemoteSwiftPackageReference "CompactSlider" */,
+				BDE485262ED2BC5C004CDB0E /* XCRemoteSwiftPackageReference "BlurUIKit" */,
+				BD95FC4F2ED4E1EB009F26DA /* XCRemoteSwiftPackageReference "KeyboardDismisser" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = BD00D6402ED162400002FA95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD00D63E2ED1623F0002FA95 /* SupertonicTTS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD00D63D2ED1623F0002FA95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE485142ED2A447004CDB0E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD00D63B2ED1623F0002FA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD6C01582EDE776F00A87867 /* PreferencesView.swift in Sources */,
+				BD6E125B2EE9103000B6DEE4 /* Helpers.swift in Sources */,
+				BDE485192ED2A447004CDB0E /* ApplicationVM.swift in Sources */,
+				BD867C372EEA5F7500024301 /* SampleText.swift in Sources */,
+				BD95FC6C2ED51C12009F26DA /* PromptStorage.swift in Sources */,
+				BD95FC702ED52443009F26DA /* PromptListView.swift in Sources */,
+				BDE4851A2ED2A447004CDB0E /* ContentView.swift in Sources */,
+				BD95FC6A2ED51BAD009F26DA /* KeyboardObserver.swift in Sources */,
+				BDD288BE2EEB9FD0007F7C1C /* CacheController.swift in Sources */,
+				BD867C1F2EEA37F700024301 /* GeneratedAudioView.swift in Sources */,
+				BD5F4C4E2ED7E0ED00B5FB80 /* Haptics.swift in Sources */,
+				BD6C015A2EDE784E00A87867 /* Voice.swift in Sources */,
+				BD6E125D2EE91F9C00B6DEE4 /* TextInputView.swift in Sources */,
+				BD95FC682ED51718009F26DA /* PerformanceMonitorView.swift in Sources */,
+				BDB071892ED69D45004A12F7 /* SynthesisConfig.swift in Sources */,
+				BDE4851B2ED2A447004CDB0E /* OnnxHelpers.swift in Sources */,
+				BDE4851C2ED2A447004CDB0E /* TTSAudioPlayer.swift in Sources */,
+				BDE485252ED2B78B004CDB0E /* ShakeDetector.swift in Sources */,
+				BDB0718B2ED69E6D004A12F7 /* SupertonicSynthesizerEngine.swift in Sources */,
+				BDE4851D2ED2A447004CDB0E /* TTSService.swift in Sources */,
+				BD867C352EEA571C00024301 /* Preferences.swift in Sources */,
+				BDE485202ED2A839004CDB0E /* PerformanceMonitor.swift in Sources */,
+				BDE4851E2ED2A447004CDB0E /* App.swift in Sources */,
+				BD95FC6E2ED52168009F26DA /* HomeHeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BD00D6482ED162410002FA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BD00D6492ED162410002FA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD00D64B2ED162410002FA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48S57XVT54;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.SupertonicTTS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD00D64C2ED162410002FA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48S57XVT54;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.SupertonicTTS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD00D63A2ED1623F0002FA95 /* Build configuration list for PBXProject "SupertonicTTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD00D6482ED162410002FA95 /* Debug */,
+				BD00D6492ED162410002FA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD00D64A2ED162410002FA95 /* Build configuration list for PBXNativeTarget "SupertonicTTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD00D64B2ED162410002FA95 /* Debug */,
+				BD00D64C2ED162410002FA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD00D6592ED162D00002FA95 /* XCRemoteSwiftPackageReference "onnxruntime-swift-package-manager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/microsoft/onnxruntime-swift-package-manager?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.20.0;
+			};
+		};
+		BD95FC4F2ED4E1EB009F26DA /* XCRemoteSwiftPackageReference "KeyboardDismisser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AbodiDawoud/KeyboardDismisser";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		BDE485212ED2B089004CDB0E /* XCRemoteSwiftPackageReference "CompactSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/buh/CompactSlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.1.0;
+			};
+		};
+		BDE485262ED2BC5C004CDB0E /* XCRemoteSwiftPackageReference "BlurUIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/BlurUIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD00D65A2ED162D00002FA95 /* onnxruntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD00D6592ED162D00002FA95 /* XCRemoteSwiftPackageReference "onnxruntime-swift-package-manager" */;
+			productName = onnxruntime;
+		};
+		BD00D65C2ED162D00002FA95 /* onnxruntime_extensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD00D6592ED162D00002FA95 /* XCRemoteSwiftPackageReference "onnxruntime-swift-package-manager" */;
+			productName = onnxruntime_extensions;
+		};
+		BD95FC502ED4E1EB009F26DA /* KeyboardDismisser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD95FC4F2ED4E1EB009F26DA /* XCRemoteSwiftPackageReference "KeyboardDismisser" */;
+			productName = KeyboardDismisser;
+		};
+		BDE485222ED2B089004CDB0E /* CompactSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE485212ED2B089004CDB0E /* XCRemoteSwiftPackageReference "CompactSlider" */;
+			productName = CompactSlider;
+		};
+		BDE485272ED2BC5C004CDB0E /* BlurUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDE485262ED2BC5C004CDB0E /* XCRemoteSwiftPackageReference "BlurUIKit" */;
+			productName = BlurUIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BD00D6372ED1623F0002FA95 /* Project object */;
+}
