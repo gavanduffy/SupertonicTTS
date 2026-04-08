@@ -1,0 +1,83 @@
+name: Build and upload nightly ipa
+
+on:
+  push:
+    branches:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Get commit SHA
+        id: commit_sha
+        run: |
+          SHA_SHORT=$(git rev-parse --short HEAD)
+          echo "sha_short=$SHA_SHORT" >> $GITHUB_OUTPUT
+          echo "Commit SHA: $SHA_SHORT"
+
+      - name: Download TTS models from Hugging Face
+        run: |
+          echo "Downloading TTS models from Hugging Face..."
+          mkdir -p Resources/onnx
+          mkdir -p Resources/voice_styles
+
+          # Download ONNX models
+          curl -L -o Resources/onnx/tts.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/tts.json"
+          curl -L -o Resources/onnx/unicode_indexer.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/unicode_indexer.json"
+          curl -L -o Resources/onnx/duration_predictor.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/duration_predictor.onnx"
+          curl -L -o Resources/onnx/text_encoder.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/text_encoder.onnx"
+          curl -L -o Resources/onnx/vector_estimator.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/vector_estimator.onnx"
+          curl -L -o Resources/onnx/vocoder.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/vocoder.onnx"
+
+          # Download voice styles
+          curl -L -o Resources/voice_styles/M1.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/M1.json"
+          curl -L -o Resources/voice_styles/F1.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/F1.json"
+          curl -L -o Resources/voice_styles/M2.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/M2.json"
+          curl -L -o Resources/voice_styles/F2.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/F2.json"
+
+          echo "Downloaded TTS models successfully"
+          ls -la Resources/onnx/
+          ls -la Resources/voice_styles/
+
+      - name: Build app (unsigned)
+        run: |
+          echo "Building SupertonicTTS.app..."
+          xcodebuild -project SupertonicTTS.xcodeproj \
+            -scheme SupertonicTTS \
+            -configuration Release \
+            -derivedDataPath DerivedData \
+            CODE_SIGN_IDENTITY= \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGNING_ALLOWED=NO \
+            clean build
+
+      - name: Package IPA
+        run: |
+          echo "Packaging IPA..."
+          APP_PATH="DerivedData/Build/Products/Release-iphoneos/SupertonicTTS.app"
+          IPA_NAME="SupertonicTTS-iOS_nightly-${{ steps.commit_sha.outputs.sha_short }}.ipa"
+          
+          mkdir -p Payload
+          cp -R "$APP_PATH" Payload/
+          zip -r "$IPA_NAME" Payload/
+          
+          echo "IPA created: $IPA_NAME"
+          ls -lh "$IPA_NAME"
+
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SupertonicTTS-iOS-nightly-${{ steps.commit_sha.outputs.sha_short }}
+          path: SupertonicTTS-iOS_nightly-${{ steps.commit_sha.outputs.sha_short }}.ipa
+          retention-days: 30
