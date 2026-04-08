@@ -29,26 +29,26 @@ jobs:
       - name: Download TTS models from Hugging Face
         run: |
           echo "Downloading TTS models from Hugging Face..."
-          mkdir -p Resources/onnx
-          mkdir -p Resources/voice_styles
+          mkdir -p SupertonicTTS/Resources/onnx
+          mkdir -p SupertonicTTS/Resources/voice_styles
 
           # Download ONNX models
-          curl -L -o Resources/onnx/tts.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/tts.json"
-          curl -L -o Resources/onnx/unicode_indexer.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/unicode_indexer.json"
-          curl -L -o Resources/onnx/duration_predictor.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/duration_predictor.onnx"
-          curl -L -o Resources/onnx/text_encoder.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/text_encoder.onnx"
-          curl -L -o Resources/onnx/vector_estimator.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/vector_estimator.onnx"
-          curl -L -o Resources/onnx/vocoder.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/vocoder.onnx"
+          curl -L -o SupertonicTTS/Resources/onnx/tts.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/tts.json"
+          curl -L -o SupertonicTTS/Resources/onnx/unicode_indexer.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/unicode_indexer.json"
+          curl -L -o SupertonicTTS/Resources/onnx/duration_predictor.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/duration_predictor.onnx"
+          curl -L -o SupertonicTTS/Resources/onnx/text_encoder.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/text_encoder.onnx"
+          curl -L -o SupertonicTTS/Resources/onnx/vector_estimator.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/vector_estimator.onnx"
+          curl -L -o SupertonicTTS/Resources/onnx/vocoder.onnx "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/vocoder.onnx"
 
           # Download voice styles
-          curl -L -o Resources/voice_styles/M1.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/M1.json"
-          curl -L -o Resources/voice_styles/F1.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/F1.json"
-          curl -L -o Resources/voice_styles/M2.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/M2.json"
-          curl -L -o Resources/voice_styles/F2.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/F2.json"
+          curl -L -o SupertonicTTS/Resources/voice_styles/M1.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/M1.json"
+          curl -L -o SupertonicTTS/Resources/voice_styles/F1.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/F1.json"
+          curl -L -o SupertonicTTS/Resources/voice_styles/M2.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/M2.json"
+          curl -L -o SupertonicTTS/Resources/voice_styles/F2.json "https://huggingface.co/Supertone/supertonic/resolve/main/onnx/F2.json"
 
           echo "Downloaded TTS models successfully"
-          ls -la Resources/onnx/
-          ls -la Resources/voice_styles/
+          ls -la SupertonicTTS/Resources/onnx/
+          ls -la SupertonicTTS/Resources/voice_styles/
 
       - name: Build app (unsigned)
         run: |
